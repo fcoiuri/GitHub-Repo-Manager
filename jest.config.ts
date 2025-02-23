@@ -8,6 +8,12 @@ const createJestConfig = nextJest({
 const config: Config = {
   coverageProvider: 'v8',
   testEnvironment: 'jsdom',
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
+  moduleNameMapper: {
+    '^.+\\.(svg)$': '<rootDir>/src/__mocks__/svg.tsx',
+    '^.+\\.(css|scss)$': 'identity-obj-proxy',
+  },
+  moduleDirectories: ['node_modules', 'src'],
 };
 
 export default createJestConfig(config);
