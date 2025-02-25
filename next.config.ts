@@ -19,6 +19,9 @@ const nextConfig: NextConfig = {
       },
     },
   },
+  images: {
+    domains: ['avatars.githubusercontent.com'],
+  },
 };
 
 export default nextConfig;
