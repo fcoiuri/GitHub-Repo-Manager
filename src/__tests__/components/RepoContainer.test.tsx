@@ -255,7 +255,7 @@ describe('RepoContainer', () => {
     expect(html).toContain('Repo Two');
     expect(html).toContain('Description for repo two');
 
-    expect(html).toContain('currentStatus=true');
+    expect(html).toContain('aria-label="Remover repositório"');
   });
 
   it("should display a 'no favorites' message when there are no favorited repositories", async () => {
