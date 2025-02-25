@@ -1,4 +1,4 @@
-import SearchIcon from '@/assets/icons/search.svg';
+import { SearchSVG } from '@/assets';
 
 const Search = () => {
   return (
@@ -17,7 +17,7 @@ const Search = () => {
         className="absolute inset-y-0 end-0 flex items-center pe-3"
         aria-label="Buscar"
       >
-        <SearchIcon />
+        <SearchSVG />
       </button>
     </form>
   );

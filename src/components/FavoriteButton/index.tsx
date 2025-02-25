@@ -1,7 +1,7 @@
 'use client';
 import React, { useState } from 'react';
-import Favorite from '@/assets/icons/favorite.svg';
-import Favorited from '@/assets/icons/favorited.svg';
+import { FavoriteSVG } from '@/assets';
+import { FavoritedSVG } from '@/assets';
 
 interface FavoriteButtonProps {
   repoFullName: string;
@@ -46,11 +46,11 @@ const FavoriteButton = ({
     >
       {isStarred ? (
         <div className="flex justify-center items-center border-[1px] border-[#32C0C6] w-[40px] h-[40px] rounded-full">
-          <Favorited />
+          <FavoritedSVG />
         </div>
       ) : (
         <div className="flex justify-center items-center bg-[#F3F3F5] w-[40px] h-[40px] rounded-full">
-          <Favorite />
+          <FavoriteSVG />
         </div>
       )}
     </button>

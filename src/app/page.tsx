@@ -1,4 +1,4 @@
-import HomePage from '@/assets/icons/homePage.svg';
+import { HomePageSVG } from '@/assets';
 import Search from '@/components/Search';
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         <div className="lg:hidden w-full">
           <Search />
         </div>
-        <HomePage
+        <HomePageSVG
           className="mt-12 hidden lg:flex"
           data-testid="home-page-icon"
         />

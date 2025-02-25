@@ -1,5 +1,4 @@
-import Favorited from '@/assets/icons/favorited.svg';
-import UserIcon from '@/assets/icons/user.svg';
+import { FavoritedSVG, UserSVG } from '@/assets';
 import Link from 'next/link';
 
 const MobileNavBar = () => {
@@ -10,14 +9,14 @@ const MobileNavBar = () => {
         className="bg-[#32C0C6] flex justify-center items-center py-5"
         aria-label="Página Inicial"
       >
-        <UserIcon data-testid="user-icon" />
+        <UserSVG data-testid="user-icon" />
       </Link>
       <Link
         href="/favorites"
         className="py-5 flex justify-center items-center bg-white"
         aria-label="Favoritos"
       >
-        <Favorited
+        <FavoritedSVG
           data-testid="favorites-icon"
           style={{
             filter:

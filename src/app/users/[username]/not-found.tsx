@@ -1,4 +1,4 @@
-import UserNotFound from '@/assets/icons/userNotFound.svg';
+import { UserNotFoundSVG } from '@/assets';
 import Search from '@/components/Search';
 import Title from '@/components/Title';
 
@@ -20,7 +20,7 @@ const NotFound = ({ username }: NotFoundProps) => {
           <div className="font-medium lg:text-base text-[13px] ">
             Verifique se a escrita está correta ou tente novamente
           </div>
-          <UserNotFound
+          <UserNotFoundSVG
             className="mt-12 lg:flex hidden"
             data-testid="user-not-found-icon"
           />

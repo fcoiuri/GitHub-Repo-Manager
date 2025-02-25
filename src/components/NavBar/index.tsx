@@ -1,6 +1,6 @@
-import Heart from '@/assets/icons/heart.svg';
 import Link from 'next/link';
 import Search from '../Search';
+import { HeartSVG } from '@/assets';
 
 const NavBar = () => {
   return (
@@ -14,7 +14,7 @@ const NavBar = () => {
           items-center text-sm text-white font-medium cursor-pointer"
         aria-label="Favoritos"
       >
-        <Heart data-testid="heart-icon" />
+        <HeartSVG data-testid="heart-icon" />
         <div className="font-medium">Favoritos</div>
       </Link>
     </nav>

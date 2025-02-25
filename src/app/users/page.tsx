@@ -1,11 +1,10 @@
 import { redirect } from 'next/navigation';
 
-export default function UsersPage({
+export default async function UsersPage({
   searchParams,
 }: {
-  searchParams: { username?: string };
+  searchParams: Promise<{ username?: string }>;
 }) {
-  const { username } = searchParams;
-
+  const { username } = await searchParams;
   redirect(`/users/${username}`);
 }

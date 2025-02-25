@@ -92,7 +92,8 @@ const RepoContainer = async ({
 
       {finalRepos.length < 1 && (
         <div className="text-center font-semibold text-lg text-[#616161]">
-          Você ainda não favoritou nenhum repositório.
+          Este usuário não tem nenhum repositório ou você ainda não favoritou
+          nenhum repositório.
         </div>
       )}
     </div>
