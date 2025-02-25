@@ -1,8 +1,7 @@
 import fullDate from '@/utils/date';
-import Favorite from '@/assets/icons/favorite.svg';
-import Favorited from '@/assets/icons/favorited.svg';
 import { fetchGitHubRepos, fetchStarredRepos } from '@/app/api';
 import { RepoType, RepoTypeElement } from '@/schemas/githubSchema';
+import FavoriteButton from '@/components/FavoriteButton';
 
 interface RepoContainerProps {
   username: string;
@@ -60,31 +59,10 @@ const RepoContainer = async ({
             <div className="flex justify-between font-semibold text-lg text-[#616161]">
               <div>{repo.name}</div>
               <div className="transition delay-150 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 cursor-pointer">
-                <form
-                  method="POST"
-                  action={`/api/toggleFavorite?repo=${encodeURIComponent(
-                    repo?.full_name ?? ''
-                  )}&currentStatus=${repo.isStarred}`}
-                >
-                  <button
-                    type="submit"
-                    aria-label={
-                      repo.isStarred
-                        ? 'Remover repositório'
-                        : 'Favoritar repositório'
-                    }
-                  >
-                    {repo.isStarred ? (
-                      <div className="flex justify-center items-center border-[1px] border-[#32C0C6] w-[40px] h-[40px] rounded-full">
-                        <Favorited />
-                      </div>
-                    ) : (
-                      <div className="flex justify-center items-center bg-[#F3F3F5] w-[40px] h-[40px] rounded-full">
-                        <Favorite />
-                      </div>
-                    )}
-                  </button>
-                </form>
+                <FavoriteButton
+                  repoFullName={repo?.full_name ?? ''}
+                  initialStatus={repo.isStarred}
+                />
               </div>
             </div>
 
