@@ -44,7 +44,9 @@ export default async function UserPage(props: {
                 {user.name}
               </div>
 
-              <div className="">@{user.login}</div>
+              <div className="text-start lg:text-center w-full">
+                @{user.login}
+              </div>
             </div>
           </div>
 
