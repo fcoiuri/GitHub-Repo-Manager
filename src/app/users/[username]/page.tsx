@@ -28,7 +28,6 @@ export default async function UserPage(props: {
         <Search />
       </div>
       <div className="lg:col-span-4 col-span-12 ">
-        {/* <div className="lg:mt-4 border-2 border-[#E3E6E9] rounded-lg lg:rounded-sm w-full lg:justify-center flex flex-col text-[#4E4E4E] text-sm font-normal lg:items-center px-4 lg:px-0"> */}
         <div className="lg:mt-4 border-2 border-[#E3E6E9] rounded-lg lg:rounded-sm w-full lg:justify-center flex flex-col text-[#4E4E4E] text-sm font-normal lg:items-center px-4 lg:px-0">
           <div className="lg:text-center flex lg:flex-col">
             <Image

@@ -1,13 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import Home from '@/app/page';
 
-// jest.mock('@/assets/icons/homePage.svg', () => {
-//   return {
-//     __esModule: true,
-//     default: () => <svg data-testid="home-page-icon" />,
-//   };
-// });
-
 describe('Home', () => {
   test('should render homePage texts and HomePage icon', () => {
     render(<Home />);
