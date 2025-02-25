@@ -12,6 +12,7 @@ const config: Config = {
   moduleNameMapper: {
     '^.+\\.(svg)$': '<rootDir>/src/__mocks__/svg.tsx',
     '^.+\\.(css|scss)$': 'identity-obj-proxy',
+    '^@/(.*)$': '<rootDir>/src/$1',
   },
   moduleDirectories: ['node_modules', 'src'],
 };
