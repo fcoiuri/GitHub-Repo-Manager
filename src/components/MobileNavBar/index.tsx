@@ -10,7 +10,7 @@ const MobileNavBar = () => {
         className="bg-[#32C0C6] flex justify-center items-center py-5"
         aria-label="Página Inicial"
       >
-        <UserIcon />
+        <UserIcon data-testid="user-icon" />
       </Link>
       <Link
         href="/favorites"
@@ -18,6 +18,7 @@ const MobileNavBar = () => {
         aria-label="Favoritos"
       >
         <Favorited
+          data-testid="favorites-icon"
           style={{
             filter:
               'invert(58%) sepia(0%) saturate(171%) hue-rotate(246deg) brightness(97%) contrast(80%)',
