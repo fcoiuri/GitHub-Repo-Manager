@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import SearchBar from '@/components/SearchBar';
+import NavBar from '@/components/NavBar';
 import { describe } from 'node:test';
 
-describe('SearchBar', () => {
+describe('NavBar', () => {
   test('should render a text input and a search button', () => {
-    render(<SearchBar />);
+    render(<NavBar />);
 
     const input = screen.getByPlaceholderText(/Buscar usuário/i);
     const button = screen.getByRole('button');
@@ -16,7 +16,7 @@ describe('SearchBar', () => {
   });
 
   test('should render a favorite section with the Heart icon and text "Favoritos"', () => {
-    render(<SearchBar />);
+    render(<NavBar />);
 
     const favoriteText = screen.getByText('Favoritos');
     const favoriteContainer = favoriteText.closest('div');

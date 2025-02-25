@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import NotFound from '@/app/users/[username]/not-found';
 import { describe } from 'node:test';
 
-describe('SearchBar', () => {
+describe('NotFound', () => {
   test('should render a title with user searched', () => {
     render(<NotFound username="test" />);
 
