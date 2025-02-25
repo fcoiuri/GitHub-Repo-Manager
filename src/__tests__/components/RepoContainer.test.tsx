@@ -373,6 +373,8 @@ describe('RepoContainer', () => {
     });
     const html = renderToStaticMarkup(element);
 
-    expect(html).toContain('Você ainda não favoritou nenhum repositório.');
+    expect(html).toContain(
+      'Este usuário não tem nenhum repositório ou você ainda não favoritou nenhum repositório.'
+    );
   });
 });

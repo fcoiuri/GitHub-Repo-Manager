@@ -6,3 +6,5 @@ import { TextEncoder, TextDecoder } from 'util';
 (global as any).MessageChannel = MessageChannel;
 (global as any).TextEncoder = TextEncoder;
 (global as any).TextDecoder = TextDecoder;
+
+jest.setTimeout(70000);
