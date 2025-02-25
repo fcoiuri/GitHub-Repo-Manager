@@ -1,36 +1,89 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Project Setup
 
-## Getting Started
+This project is a simple website that allows users to access a GitHub user's page, view their public repositories, and manage their favorite repositories (mark/unmark as favorite).
 
-First, run the development server:
+## Requirements
+
+- Node.js (version 14 or higher)
+- npm or yarn
+
+## Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/fcoiuri/casar-test
+cd casar-test
+```
+
+2. **Install dependencies:**
+
+With npm:
+
+```bash
+npm install
+```
+
+Or with yarn:
+
+```bash
+yarn install
+```
+
+## Environment Configuration
+
+Create a file named `.env` in the root of the project and add the environment variable required to access the GitHub API:
+
+```bash
+NEXT_PUBLIC_GITHUB_TOKEN=your_token_here
+```
+
+### How to generate your GitHub access token:
+
+1. **Go to GitHub Settings > Developer settings > Personal access tokens.**
+2. **Click "Generate new token".**
+3. **Select the necessary scopes (e.g., public_repo to access public repositories).**
+4. **Generate the token and copy it.**
+5. **Paste the token in the .env file in place of your_token_here.**
+
+## Running the Project
+
+To start the project in development mode, run:
+
+With npm:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or with yarn:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+The application will be available at: http://localhost:3000
 
-## Learn More
+## Testing
 
-To learn more about Next.js, take a look at the following resources:
+To run the unit tests:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+or
 
-## Deploy on Vercel
+```bash
+yarn test
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Additional Configuration
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- This project uses Next.js and Tailwind CSS.
+- Ensure that you have configured your path aliases and testing environment according to Next.js and Tailwind documentation.
+- All environment variables should be configured in the .env file as shown above.
+
+## Final Notes
+
+This project integrates the GitHub API to fetch information about users and repositories, allowing users to view repository details and manage their favorites in a simple and intuitive way.
