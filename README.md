@@ -2,6 +2,17 @@
 
 This project is a simple website that allows users to access a GitHub user's page, view their public repositories, and manage their favorite repositories (mark/unmark as favorite).
 
+## Technologies Used
+* Next.js
+* TypeScript
+* Tailwind CSS
+* Zod (for schema validation)
+* Jest (for unit testing)
+* Testing Library (@testing-library/react, jest-dom, user-event)
+* ESLint (with Next.js configuration)
+* Commitizen (for standardized commit messages)
+* SVGR (to transform SVGs into React components)
+
 ## Requirements
 
 - Node.js (version 14 or higher)
